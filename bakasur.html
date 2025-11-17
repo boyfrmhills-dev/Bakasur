@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Re:Link – Memory Vault</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CryptoJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+
+<body>
+
+<!-- PASSWORD LOCK SCREEN -->
+<div id="lockScreen" class="full-screen">
+    <div class="cover-content">
+        <h1 class="cover-title">Re:Link Memory Vault</h1>
+        <p class="cover-subtitle">Enter your vault password</p>
+
+        <input type="password" id="vaultPassword" placeholder="Enter password">
+        <button id="unlockBtn" class="primary-btn wide-btn">Unlock</button>
+
+        <p class="hint-text">Default user password: <b>1234</b></p>
+
+    </div>
+</div>
+
+<!-- APP UI -->
+<div class="app-shell" id="mainApp" style="display:none;">
+    
+    <header class="app-header">
+        <h2>Re:Link – Memory Vault</h2>
+        <p class="tagline">Your private encrypted memory vault.</p>
+
+        <button id="logoutBtn" class="primary-btn" style="margin-top:10px; background:#555;">Logout</button>
+        <button id="changePassBtn" class="primary-btn" style="margin-top:10px;">Change Password</button>
+    </header>
+
+    <!-- Upload Form -->
+    <section class="card" id="uploadSection">
+        <h3>Add a Memory</h3>
+
+        <label>File (Max 1MB)</label>
+        <input type="file" id="fileInput">
+
+        <label>Memory Title</label>
+        <input type="text" id="titleInput" placeholder="A moment to remember">
+
+        <label>Category</label>
+        <select id="categoryInput">
+            <option>Family</option>
+            <option>Travel</option>
+            <option>Personal</option>
+            <option>School</option>
+            <option>Other</option>
+        </select>
+
+        <label>Description</label>
+        <textarea id="descriptionInput" placeholder="Memory story..."></textarea>
+
+        <button id="saveBtn" class="primary-btn wide-btn">Save Memory</button>
+    </section>
+
+    <!-- Memory List -->
+    <section class="card">
+        <h3>Your Memories</h3>
+        <div id="memoryList"></div>
+    </section>
+
+</div>
+
+<!-- CHANGE PASSWORD POPUP -->
+<div id="passwordModal" class="full-screen" style="display:none; background:rgba(0,0,0,0.6);">
+    <div class="cover-content" style="max-width:350px;">
+        <h3>Change Password</h3>
+
+        <label>Old Password</label>
+        <input type="password" id="oldPass">
+
+        <label>New Password</label>
+        <input type="password" id="newPass">
+
+        <label>Confirm New Password</label>
+        <input type="password" id="confirmPass">
+
+        <button id="savePassBtn" class="primary-btn" style="width:100%; margin-top:10px;">
+            Save Password
+        </button>
+        <button id="closePassModal" class="primary-btn" style="background:#777; width:100%; margin-top:6px;">
+            Cancel
+        </button>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff7f0;
+    color: #333;
+}
+
+/* Lock Screen */
+.full-screen {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, #ffd3b6, #ff7f50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover-content {
+    background: #fff8f2;
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 18px rgba(0,0,0,0.3);
+}
+
+.cover-title {
+    font-size: 26px;
+    color: #d4512f;
+}
+
+.cover-subtitle {
+    font-size: 14px;
+    color: #6d4b3f;
+    margin-bottom: 12px;
+}
+
+.primary-btn {
+    background: #ff7f50;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background: #ff6347;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+    border: 1px solid #ffb085;
+}
+
+/* Main App */
+.app-shell {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 15px;
+}
+
+.card {
+    background: #ffe8d6;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.memory {
+    background: #fff0e0;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+.download-btn {
+    display: inline-block;
+    background: #ff7f50;
+    padding: 6px 10px;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 6px;
+}
+
+.delete-btn {
+    background: #d9534f;
+    padding: 6px 10px;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    margin-left: 8px;
+}
+
+#passwordModal input {
+    margin-bottom: 8px;
+}
